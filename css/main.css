@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* VARIABLES */
 
 :root{
@@ -29,6 +36,7 @@ html{
     height: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 img{
@@ -183,7 +191,9 @@ a{
         position: absolute;
         right: -38px;
         top: -15px;
-        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
     }
 }
 .sitenav-list {
@@ -250,10 +260,53 @@ a{
     line-height: 49px;
     text-align: center;
     margin: 0;
+    margin-bottom: 50px;
     letter-spacing: 6.25px;
     text-transform: uppercase;
     color: #FFFFFF;
 }
+.hero__img{
+    width: 30px;
+    height: 107px;
+    margin: 0 auto;
+}
+.hero__link .hero__img{
+    -webkit-animation-name: hero__img;
+            animation-name: hero__img;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    height: 150px;
+}
+
+@-webkit-keyframes hero__img {
+    0%{
+         -webkit-transform: translateY(-10px);
+                 transform: translateY(-10px);
+    }
+    100%{
+         -webkit-transform: translateY(40px);
+                 transform: translateY(40px);
+    }
+    
+}
+
+@keyframes hero__img {
+    0%{
+         -webkit-transform: translateY(-10px);
+                 transform: translateY(-10px);
+    }
+    100%{
+         -webkit-transform: translateY(40px);
+                 transform: translateY(40px);
+    }
+    
+}
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (     -o-min-device-pixel-ratio: 2/1),
