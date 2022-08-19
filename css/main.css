@@ -389,8 +389,12 @@ only screen and (                min-resolution: 2dppx) {
     text-transform: uppercase;
     color: #24303E;
 }
+.jobs__link:hover + .jobs__border {
+    opacity: 1;
+}
 .jobs__border{
     position: absolute;
+    z-index: -1;
     bottom: 64px;
     left: calc(50% - 72px);
     width: 137px;
@@ -465,7 +469,7 @@ only screen and (                min-resolution: 2dppx) {
         text-align: center;
         margin-bottom: 0;
     }
-        .jobs__link{
+    .jobs__link{
         justify-content: start;
     }
     .jobs__border{
