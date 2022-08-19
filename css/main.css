@@ -1,0 +1,478 @@
+/* VARIABLES */
+
+:root{
+    /* --main-bg-color : #fff; */
+    /* --main-text-color : #9597A5; */
+    /* --main-font-size : 16px; */
+    /* --main-font-weight : 400; */
+    /* --main-line-height : 1.5; */
+}
+
+/* GENERAL */
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    height: auto;
+}
+
+
+
+/* barlow-regular - latin */
+@font-face {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/barlow-v12-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url("../fonts/barlow-v12-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* barlow-600 - latin */
+@font-face {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/barlow-v12-latin-600.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url("../fonts/barlow-v12-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fraunces-700 - latin */
+@font-face {
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/fraunces-v23-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url("../fonts/fraunces-v23-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* fraunces-900 - latin */
+@font-face {
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/fraunces-v23-latin-900.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url("../fonts/fraunces-v23-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* VISUALLY-HIDDEN */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width: 1390px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 23px;
+    padding-left: 23px;
+}
+
+/* STICKY-FOOTER */
+
+.site-main{
+    flex-grow: 1;
+}
+
+
+/* site header start */
+.site-header {
+    position: relative;
+    background-color: #49BCF1;
+    padding: 35px 0 26px 0;
+}
+.site-header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.site-header__logo-img {
+    width: 170px;
+    height: 33px;
+}
+.site-header__inner {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: none;
+    height: 305px;
+    margin: 0 24px;
+    margin-top: 26px;
+    padding: 0 23px;
+    /* height: 100vh; */
+    background-color: #FFFCF8;
+}
+.sitenav-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-top: 40px;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+.sitenav-item{
+    margin-bottom: 32px;
+}
+.sitenav-link {
+    font-family: "Barlow";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #808397;
+}
+.site-header__link {
+    display: block;
+    width: 140px;
+    margin: 0 auto;
+    padding: 15px 31px;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #24303E;
+    background-color: #FBD600;
+    border-radius: 28px
+}
+.site-button{
+    width: 16px;
+    height: 15px;
+    background-color: transparent;
+    border: 0;
+    background-image: url("../images/toggler-open.svg");
+    background-size: 16px 15px;
+    background-repeat: no-repeat;
+}
+.show-block{
+    display: block;
+}
+
+/* site hero section start */
+.hero {
+    padding: 62px 0 350px 0; 
+    background-image: url("../images/hero-bg.jpg");
+    background-position: bottom  center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero__title {
+    font-family: "Fraunces";
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 6.25px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                -webkit-min-device-pixel-ratio: 2),
+only screen and (                -o-min-device-pixel-ratio: 2/1),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+    
+    .hero{
+        background-image: url("../images/hero-bg@2x.jpg");
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .site-button{
+        display: none;
+    }
+    .site-header__inner {
+        position: static;
+        display: block;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+    }    
+    .sitenav-list {
+        flex-direction: row;
+        margin: 0;
+        padding-top: 0;
+        padding-left: 0;
+    }
+    .sitenav-item{
+        margin-bottom: 0;
+    }
+    .sitenav-item:not(:last-child){
+        margin-right: 47px;
+    }
+    .sitenav-link {
+        font-size: 18px;
+        color: #FFFFFF;
+    }
+    .site-header__link {
+        display: none;
+    }
+    .container{
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .hero{
+        padding: 79px 0 423px 0;
+    }
+    
+}
+
+@media only screen and (min-width: 1111px) {
+    .site-header__inner {
+        display: flex;
+        align-items: center;
+    }    
+    .sitenav-list {
+        margin-right: 47px;
+    }
+    .sitenav-item{
+        margin-bottom: 0;
+    }
+    .sitenav-item:not(:last-child){
+        margin-right: 47px;
+    }
+    .sitenav-link {
+        font-size: 18px;
+        color: #FFFFFF;
+    }
+    .site-header__link {
+        display: block;
+        font-family: "Fraunces";
+        font-style: normal;
+        font-weight: 700;
+        color: #24303E;
+        background-color: #FFFFFF;
+    }
+    .site-header__link:hover {
+        color: #FFFFFF;
+        background-color: #ffffff40;
+        
+    }
+    .container{
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+@media only screen and (min-width: 578px) {
+    .hero{
+        padding-bottom: 400px;
+    }
+}
+
+/* jobs sections start */
+.jobs {
+}
+.jobs__list {
+    list-style: none;
+}
+.jobs__item {
+    position: relative;
+    padding: 377px 0 64px 0;
+}
+.jobs__item:nth-child(3) {
+    padding: 377px 24px 38px 24px;
+    background-image: url("../images/cherry.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.jobs__item:nth-child(4) {
+    padding: 377px 24px 38px 24px;
+    background-image: url("../images/orange.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.jobs__item:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: 312px;
+    background-image: url("../images/egg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.jobs__item:nth-child(2)::before{
+    background-image: url("../images/glass.jpg");
+}
+.jobs__item:nth-child(3)::before{
+    display: none;
+}
+.jobs__item:nth-child(4)::before{
+    display: none;
+}
+.jobs__title {
+    font-family: 'Fraunces';
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 24px;
+    letter-spacing: -0.228571px;
+    color: #24303E;
+}
+.jobs__desc {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 32px;
+    letter-spacing: -0.128571px;
+    color: #808397;
+}
+.jobs-title-color{
+    color: #24554A;
+    
+}
+.jobs__link {
+    display: flex;
+    justify-content: center;
+    font-family: 'Fraunces';
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #24303E;
+}
+.jobs__border{
+    position: absolute;
+    bottom: 64px;
+    left: calc(50% - 72px);
+    width: 137px;
+    height: 10px;
+    background-color: #FAD400;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    border-radius: 28px;
+}
+.jobs__border--color{
+    background-color: #FE7766;
+}
+
+@media only screen and (min-width: 768px) {
+    .jobs__list {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .jobs__item{
+        padding: 0;
+    }
+    .jobs__item:nth-child(1){
+        flex-direction: row-reverse;
+        
+    }
+    .jobs__item-inner{
+        width: 695px;
+        padding: 158px 47px 157px 126px;
+    }
+    .jobs__item:before{
+        position: static;
+    }
+    .jobs__item:nth-child(1){
+        display: flex;
+        min-width: 445px;
+    }
+    .jobs__item:nth-child(2){
+        display: flex;
+        min-width: 445px;
+    }
+    .jobs__item:before {
+        width: 720px;
+        height: 100%;
+    }
+    .jobs__item:nth-child(3){
+        padding: 317px 154px 59px 140px;
+    }
+    .jobs__item:nth-child(4){
+        padding: 317px 140px 59px 140px;
+    }
+    .jobs__item-wrapper{
+        width: 339px;
+    }
+    .jobs__title {
+        text-align: start;
+        font-size: 40px;
+        line-height: 49px;
+        letter-spacing: -0.285714px;
+    }
+    .jobs__desc {
+        text-align: start;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: -0.128571px;
+        
+    }
+    .jobs__item-wrapper .jobs__title{
+        text-align: center;
+    }
+    .jobs__item-wrapper .jobs__desc{
+        text-align: center;
+        margin-bottom: 0;
+    }
+        .jobs__link{
+        justify-content: start;
+    }
+    .jobs__border{
+        bottom: 157px;
+        left: 111px;
+    }
+    .jobs__item:nth-child(2) .jobs__border{
+        left: calc(50% + 109px);
+    }
+}
