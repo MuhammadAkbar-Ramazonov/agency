@@ -360,7 +360,7 @@ only screen and (                min-resolution: 2dppx) {
     padding: 0 20px;
 }
 .jobs__title {
-    font-family: 'Fraunces';
+    font-family: "Fraunces";
     font-weight: 900;
     font-size: 32px;
     line-height: 39px;
@@ -386,7 +386,7 @@ only screen and (                min-resolution: 2dppx) {
 .jobs__link {
     display: flex;
     justify-content: center;
-    font-family: 'Fraunces';
+    font-family: "Fraunces";
     font-weight: 900;
     font-size: 15px;
     line-height: 25px;
@@ -488,4 +488,98 @@ only screen and (                min-resolution: 2dppx) {
     .jobs__item:nth-child(2) .jobs__border{
         left: calc(50% + 5px);
     }
+}
+
+
+/* clients sections start */
+.clients {
+    padding-top: 64px;
+    padding-bottom: 86px;
+}
+.clients__title {
+    font-family: "Fraunces";
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 64px;
+    letter-spacing: 5px;
+    color: #A7AAAD;
+}
+.clients__item:not(:last-child) {
+    margin-bottom: 64px;
+}
+.clients__item::before{
+    content: "";
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    background-image: url("../images/Emily.png");
+    background-repeat: no-repeat;
+    background-size: 72px 72px;
+}
+.clients__item:nth-child(2):before{
+    background-image: url("../images/Thomas.png");
+}
+.clients__item:nth-child(3):before{
+    background-image: url("../images/Jennie.png");
+}
+.clients__desc {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 32px;
+    letter-spacing: -0.128571px;
+    color: #5B636D;
+}
+.clients__item-title{
+    font-family: "Fraunces";
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 9px;
+    letter-spacing: -0.128571px;
+    color: #24303E;
+}
+
+.clients__text {
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: -0.1px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .clients {
+    padding: 160px 0;
+    }
+    .clients__title {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .clients__list{
+        display: flex;
+    }
+    .clients__item:not(:last-child){
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+    .clients__desc {
+        margin-bottom: 69px;
+    }
+    .clients__item::before{
+        margin-bottom: 58px;
+    }
+}
+
+@media only screen and (min-width: 1111px) {
+    
 }
