@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* VARIABLES */
 
 :root{
@@ -13,12 +20,14 @@
 *,
 *::before,
 *::after{
+    -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
 
 
 html{
     height: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -64,7 +73,12 @@ img{
 }
 
 body{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     height: 100%;
     margin: 0;
@@ -95,6 +109,7 @@ a{
     padding: 0;
     border: 0;
     white-space: nowrap;
+    -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
@@ -113,6 +128,8 @@ a{
 /* STICKY-FOOTER */
 
 .site-main{
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
 }
 
@@ -124,8 +141,14 @@ a{
     padding: 35px 0 26px 0;
 }
 .site-header__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 .site-header__logo-img {
@@ -143,11 +166,33 @@ a{
     margin-top: 26px;
     padding: 0 23px;
     margin-right: 8px;
-    margin-left: 24px;
+    margin-left: 15px;
     background-color: #FFFCF8;
 }
+
+.sitenav--active{
+    position: relative;
+}
+@media only screen and (max-width: 767px){
+    
+    .sitenav--active::before {
+        content: "";
+        border-top: 30px solid white;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        position: absolute;
+        right: -38px;
+        top: -15px;
+        transform: rotate(90deg);
+    }
+}
 .sitenav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin: 0;
     padding-top: 40px;
@@ -224,6 +269,7 @@ only screen and (                min-resolution: 2dppx) {
     
 }
 
+
 @media only screen and (min-width: 768px) {
     .site-button{
         display: none;
@@ -237,6 +283,9 @@ only screen and (                min-resolution: 2dppx) {
         background-color: transparent;
     }    
     .sitenav-list {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
         margin: 0;
         padding-top: 0;
@@ -267,7 +316,11 @@ only screen and (                min-resolution: 2dppx) {
 
 @media only screen and (min-width: 1111px) {
     .site-header__inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }    
     .sitenav-list {
@@ -384,7 +437,11 @@ only screen and (                min-resolution: 2dppx) {
     
 }
 .jobs__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     font-family: "Fraunces";
     font-weight: 900;
@@ -416,7 +473,10 @@ only screen and (                min-resolution: 2dppx) {
 
 @media only screen and (min-width: 768px) {
     .jobs__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         
     }
@@ -424,6 +484,9 @@ only screen and (                min-resolution: 2dppx) {
         padding: 0;
     }
     .jobs__item:nth-child(1){
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
         flex-direction: row-reverse;
         
     }
@@ -435,10 +498,14 @@ only screen and (                min-resolution: 2dppx) {
         position: static;
     }
     .jobs__item:nth-child(1){
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         min-width: 445px;
     }
     .jobs__item:nth-child(2){
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         min-width: 445px;
     }
@@ -479,6 +546,8 @@ only screen and (                min-resolution: 2dppx) {
         margin-bottom: 0;
     }
     .jobs__link{
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: start;
     }
     .jobs__border{
@@ -566,6 +635,8 @@ only screen and (                min-resolution: 2dppx) {
         line-height: 25px;
     }
     .clients__list{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     .clients__item:not(:last-child){
@@ -586,6 +657,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 .photo__wrapper {
     width: 100%;
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(2,50%);
 }
@@ -603,6 +675,7 @@ only screen and (                min-resolution: 2dppx) {
 @media only screen and (min-width: 1111px) {
     .photo__wrapper {
         width: 100%;
+        display: -ms-grid;
         display: grid;
         grid-template-columns: repeat(4,25%);
     }
@@ -625,7 +698,12 @@ only screen and (                min-resolution: 2dppx) {
 }
 .sitenav-list--active {
     padding-top: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin: 0 auto;
     margin-bottom: 88px;
@@ -648,7 +726,11 @@ only screen and (                min-resolution: 2dppx) {
     color: #FFFFFF;
 }
 .site-footer__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 .site-footer__item:not(:last-child) {
@@ -666,7 +748,7 @@ only screen and (                min-resolution: 2dppx) {
     .site-footer {
         padding: 72px 0 64px 0;
     }
-
+    
     .sitenav-item--active:nth-child(1) {
         margin-right: 0;
     }
