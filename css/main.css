@@ -303,7 +303,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 @media only screen and (min-width: 578px) {
     .hero{
-        padding-bottom: 400px;
+        padding-bottom: 470px;
     }
 }
 
@@ -320,12 +320,14 @@ only screen and (                min-resolution: 2dppx) {
 .jobs__item:nth-child(3) {
     padding: 377px 24px 38px 24px;
     background-image: url("../images/cherry.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .jobs__item:nth-child(4) {
     padding: 377px 24px 38px 24px;
     background-image: url("../images/orange.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     
@@ -346,6 +348,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 .jobs__item:nth-child(2)::before{
     background-image: url("../images/glass.jpg");
+    background-size: cover;
 }
 .jobs__item:nth-child(3)::before{
     display: none;
@@ -422,8 +425,8 @@ only screen and (                min-resolution: 2dppx) {
         
     }
     .jobs__item-inner{
-        width: 695px;
-        padding: 158px 47px 157px 126px;
+        width: 810px;
+        padding: 158px 47px 157px 114px;
     }
     .jobs__item:before{
         position: static;
@@ -437,17 +440,20 @@ only screen and (                min-resolution: 2dppx) {
         min-width: 445px;
     }
     .jobs__item:before {
-        width: 720px;
+        width: 824px;
         height: 100%;
     }
     .jobs__item:nth-child(3){
+        width: 50%;
         padding: 317px 125px 59px 140px
     }
     .jobs__item:nth-child(4){
+        width: 50%;
         padding: 317px 135px 59px 135px
     }
     .jobs__item-wrapper{
         width: 339px;
+        margin: 0 auto;
     }
     .jobs__title {
         text-align: start;
