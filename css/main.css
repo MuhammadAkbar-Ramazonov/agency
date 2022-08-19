@@ -437,10 +437,10 @@ only screen and (                min-resolution: 2dppx) {
         height: 100%;
     }
     .jobs__item:nth-child(3){
-        padding: 317px 154px 59px 140px;
+        padding: 317px 125px 59px 140px
     }
     .jobs__item:nth-child(4){
-        padding: 317px 140px 59px 140px;
+        padding: 317px 135px 59px 135px
     }
     .jobs__item-wrapper{
         width: 339px;
