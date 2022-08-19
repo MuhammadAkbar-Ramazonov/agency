@@ -140,10 +140,10 @@ a{
     z-index: 2;
     display: none;
     height: 305px;
-    margin: 0 24px;
     margin-top: 26px;
     padding: 0 23px;
-    /* height: 100vh; */
+    margin-right: 8px;
+    margin-left: 24px;
     background-color: #FFFCF8;
 }
 .sitenav-list {
@@ -559,7 +559,7 @@ only screen and (                min-resolution: 2dppx) {
 
 @media only screen and (min-width: 768px) {
     .clients {
-    padding: 160px 0;
+        padding: 160px 0;
     }
     .clients__title {
         font-size: 20px;
@@ -580,6 +580,98 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
-@media only screen and (min-width: 1111px) {
+/* photo section start */
+.photo {
     
+}
+.photo__wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}
+.photo__img{
+    width: 100%;
+    height: 188px;
+}
+
+@media only screen and (min-width: 768px) {
+    .photo__img{
+        height: 260px;
+    }
+}
+
+@media only screen and (min-width: 1111px) {
+    .photo__wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,25%);
+    }
+    .photo__img{
+        height: 447px;
+    }
+}
+
+/* site footer start */
+.site-footer {
+    padding: 64px 0 80px 0;
+    background-color: #90D4C6;
+}
+.site-footer__logo{
+    display: block;
+    width: 170px;
+    height: 33px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.sitenav-list--active {
+    padding-top: 0;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 88px;
+}
+.sitenav-item--active {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.sitenav-item--active:nth-child(2) {
+    margin-right: 57px;
+    margin-left: 57px;
+}
+.sitenav-link-color {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.128571px;
+    color: #458D7E;
+}
+.sitenav-link-color:hover {
+    color: #FFFFFF;
+}
+.site-footer__list {
+    display: flex;
+    justify-content: center;
+}
+.site-footer__item:not(:last-child) {
+    margin-right: 28px;
+}
+.site-footer__link {
+}
+.site-footer__img {
+    fill: #458D7E;
+}
+.site-footer__img:hover {
+    fill: #fff;
+}
+@media only screen and (min-width: 768px){
+    .site-footer {
+        padding: 72px 0 64px 0;
+    }
+
+    .sitenav-item--active:nth-child(1) {
+        margin-right: 0;
+    }
+    .sitenav-item--active:nth-child(2) {
+        margin-right: 57px;
+        margin-left: 57px;
+    }
 }
